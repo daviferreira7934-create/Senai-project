@@ -5,7 +5,7 @@ export default function Home({navigation}:any) {
   return (
     <View>
       
-      <Text>home</Text>
+      <Text>Meu branch</Text>
 
     <Button
         title='Perfil'
