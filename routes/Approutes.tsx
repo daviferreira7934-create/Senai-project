@@ -1,31 +1,28 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { View, Text } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import Home from "../screen/Home";
-import Perfil from "../screen/Perfil";
+
+import DashboardScreen from '../screen/DashboardScreen'
+import LoginScreen from "../screen/LoginScreen"
+import React from 'react'
+
 
 const Stack = createNativeStackNavigator();
-
 
 export default function Approutes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-      screenOptions={
-        {headerShown: false}
-      } 
-     >
-
+      <Stack.Navigator>
         <Stack.Screen
-          name="Home"
-          component={Home}
-        />
-        
-        <Stack.Screen
-          name="Perfil"
-          component={Perfil}
-        />        
+        name="LoginScreen"
+        component={LoginScreen}
+      />
 
+      <Stack.Screen
+        name="DashboardScreen"
+        component={DashboardScreen}
+      />
       </Stack.Navigator>
     </NavigationContainer>
   )
