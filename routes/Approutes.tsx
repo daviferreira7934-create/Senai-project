@@ -8,12 +8,18 @@ import LoginScreen from "../screen/LoginScreen"
 import React from 'react'
 
 
+
+
 const Stack = createNativeStackNavigator();
 
 export default function Approutes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false, 
+        }}
+      >
         <Stack.Screen
         name="LoginScreen"
         component={LoginScreen}

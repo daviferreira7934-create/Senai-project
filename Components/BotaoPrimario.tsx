@@ -5,23 +5,27 @@ interface ButtonProps{
     title: string;
     navigation: any;
     tela: string;
+    style: object;
+    text4: object;
 }
 
 export default function BotaoPrimario(
     {
         title, 
         navigation, 
-        tela
+        tela,
+        style,
+        text4
     } : ButtonProps
 ) {
   return (
     <TouchableOpacity
         onPress={()=> navigation.navigate(tela)}
+        style={style}
     >
-       <Text>
+       <Text style={text4}>
             {title}
        </Text>
-
     </TouchableOpacity>
   )
 }
