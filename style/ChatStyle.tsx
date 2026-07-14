@@ -8,14 +8,17 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     backgroundColor: colors.bg,
+    width: "100%",
+    height: "100%",
   },
 
   main: {
     flex: 1,
+    height: "100%",
   },
 
   mainContent: {
-    padding: 28,
+    padding: "2.5%",
   },
 
   header: {
@@ -24,7 +27,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     flexWrap: "wrap",
     gap: 16,
-    marginBottom: 24,
+    marginBottom: "3%",
   },
 
   headerTitle: {
@@ -54,8 +57,8 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
     borderRadius: 8,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
+    paddingHorizontal: "4%",
+    paddingVertical: "2%",
     width: 260,
   },
 
@@ -90,33 +93,42 @@ export const styles = StyleSheet.create({
     borderColor: colors.card,
   },
 
+
   panelsRow: {
     flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 20,
-    alignItems: "flex-start",
+    justifyContent: "space-between",
+    alignItems: "stretch",
+    width: "100%",
+    gap: "2%",
   },
 
-  panelColumn: {
-    flexGrow: 1,
-    flexBasis: 420,
+
+  panelColumnChat: {
+    width: "48%",
     gap: 12,
   },
+
+
+  panelColumnCanais: {
+    width: "50%",
+    gap: 12,
+  },
+
 
   panelCard: {
     backgroundColor: colors.card,
     borderRadius: 12,
     borderWidth: 1,
     borderColor: colors.border,
-    padding: 60,
-    minHeight: 40, 
+    padding: "5%",
+    minHeight: "75%",
   },
 
   panelHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 14,
+    marginBottom: "4%",
   },
 
   panelTitle: {
@@ -146,7 +158,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     gap: 12,
-    paddingVertical: 10,
+    paddingVertical: "3%",
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
   },
@@ -187,7 +199,7 @@ export const styles = StyleSheet.create({
     fontSize: 11.5,
     color: colors.subtext,
     marginTop: 2,
-    maxWidth: 240,
+    maxWidth: "80%",
   },
 
   chatMeta: {
@@ -231,7 +243,7 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     color: colors.primaryText,
     textAlign: "center",
-    marginTop: 10,
+    marginTop: "4%",
   },
 
   newMessageButton: {
@@ -241,7 +253,7 @@ export const styles = StyleSheet.create({
     gap: 8,
     backgroundColor: colors.primary,
     borderRadius: 8,
-    paddingVertical: 12,
+    paddingVertical: "3%",
   },
 
   newMessageButtonText: {

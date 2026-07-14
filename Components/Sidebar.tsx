@@ -17,17 +17,13 @@ const links: SidebarLink[] = [
   { key: 'chat', label: 'Chat', icon: 'message-circle', route: 'ChatScreen' },
   { key: 'agenda', label: 'Agenda', icon: 'calendar' },
   { key: 'arquivos', label: 'Arquivos', icon: 'folder' },
-  { key: 'perfil', label: 'Perfil', icon: 'user' },
+  { key: 'perfil', label: 'Perfil', icon: 'user', route: 'LoginScreen' }, 
 ]
 
 interface SidebarProps {
   active: string;
   onNavigate: (key: string) => void;
   navigation: any;
-  /**
-   * 'text'    -> rodapé simples ("Uso exclusivo da comunidade SENAI"), usado no Dashboard
-   * 'profile' -> ilustração + cartão de perfil do usuário no rodapé, usado no Chat
-   */
   footerVariant?: 'text' | 'profile';
 }
 
@@ -47,12 +43,12 @@ export default function Sidebar({ active, onNavigate, navigation, footerVariant 
       <View style={styles.sidebarTop}>
         <View style={styles.logoRow}>
           <View>
-          <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
-            <Image
-              source={require('../imagens/logo1.png')}
-              style={styles.logoBox}
-            />
-          </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
+              <Image
+                source={require('../imagens/logo1.png')}
+                style={styles.logoBox}
+              />
+            </TouchableOpacity>
           </View>
           <View>
             <Text style={styles.logoTextTitle}>SENAI</Text>
@@ -81,10 +77,9 @@ export default function Sidebar({ active, onNavigate, navigation, footerVariant 
 
       {footerVariant === 'profile' ? (
         <View>
-
           <TouchableOpacity
             style={styles.profileFooter}
-            onPress={() => handlePress({ key: 'perfil', label: 'Perfil', icon: 'user', route: 'LoginScreen' })}
+            onPress={() => navigation.navigate('LoginScreen')}
           >
             <View style={styles.profileAvatar}>
               <Text style={styles.profileAvatarText}>MS</Text>

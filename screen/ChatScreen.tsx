@@ -117,7 +117,7 @@ export default function ChatScreen({ navigation }: any) {
           </View>
 
           <View style={styles.panelsRow}>
-            <View style={styles.panelColumn}>
+            <View style={styles.panelColumnChat}>
               <PanelCard
                 title="Chats"
                 dropdownLabel="Recentes"
@@ -144,7 +144,7 @@ export default function ChatScreen({ navigation }: any) {
               </TouchableOpacity>
             </View>
 
-            <View style={styles.panelColumn}>
+            <View style={styles.panelColumnChat}>
               <PanelCard title="Canais" dropdownLabel="Todos" footerLabel="Ver todos os canais">
                 {canais.map((canal, index) => (
                   <CanalListItem
