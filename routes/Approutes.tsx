@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import DashboardScreen from '../screen/DashboardScreen'
 import LoginScreen from "../screen/LoginScreen"
 import React from 'react'
+import ChatScreen from '../screen/ChatScreen';
 
 
 
@@ -23,6 +24,11 @@ export default function Approutes() {
         <Stack.Screen
         name="LoginScreen"
         component={LoginScreen}
+      />
+
+      <Stack.Screen
+        name="ChatScreen"
+        component={ChatScreen}
       />
 
       <Stack.Screen
