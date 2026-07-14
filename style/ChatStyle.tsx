@@ -108,7 +108,8 @@ export const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     borderColor: colors.border,
-    padding: 18,
+    padding: 60,
+    minHeight: 40, 
   },
 
   panelHeader: {
