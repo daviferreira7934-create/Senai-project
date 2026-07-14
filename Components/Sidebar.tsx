@@ -81,16 +81,6 @@ export default function Sidebar({ active, onNavigate, navigation, footerVariant 
 
       {footerVariant === 'profile' ? (
         <View>
-          <View style={styles.sidebarIllustration}>
-            <Text style={styles.sidebarIllustrationTagline}>
-              {'Conectando monitores,\nalunos e professores.'}
-            </Text>
-            <Image
-              source={require('../imagens/img1.png')}
-              style={styles.sidebarIllustrationImage}
-              resizeMode="contain"
-            />
-          </View>
 
           <TouchableOpacity
             style={styles.profileFooter}
