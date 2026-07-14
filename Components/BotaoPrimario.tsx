@@ -20,7 +20,7 @@ export default function BotaoPrimario(
 ) {
   return (
     <TouchableOpacity
-        onPress={()=> navigation.navigate(tela)}
+        onPress={()=> navigation.replace(tela)}
         style={style}
     >
        <Text style={text4}>
