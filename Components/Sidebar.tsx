@@ -15,7 +15,7 @@ interface SidebarLink {
 const links: SidebarLink[] = [
   { key: 'inicio', label: 'Início', icon: 'home', route: 'DashboardScreen' },
   { key: 'chat', label: 'Chat', icon: 'message-circle', route: 'ChatScreen' },
-  { key: 'agenda', label: 'Agenda', icon: 'calendar' },
+  { key: 'agenda', label: 'Agenda', icon: 'calendar', route: "AgendaScreen"},
   { key: 'arquivos', label: 'Arquivos', icon: 'folder' },
   { key: 'perfil', label: 'Perfil', icon: 'user', route: 'LoginScreen' }, 
 ]

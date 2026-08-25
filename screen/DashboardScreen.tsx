@@ -86,64 +86,69 @@ export default function DashboardScreen({ navigation }: any) {
           </View>
 
           <View style={styles.grid}>
-            <SectionCard icon="calendar" title="Próximos atendimentos" actionLabel="Ver agenda">
-              {atendimentos.map((item) => (
-                <AtendimentoItem
-                  key={item.key}
-                  title={item.title}
-                  schedule={item.schedule}
-                  badgeLabel={item.badgeLabel}
-                  badgeBg={item.badgeBg}
-                  badgeColor={item.badgeColor}
+            <View style={styles.parte1}>
+              <SectionCard icon="calendar" title="Próximos atendimentos" actionLabel="Ver agenda">
+                {atendimentos.map((item) => (
+                  <AtendimentoItem
+                    key={item.key}
+                    title={item.title}
+                    schedule={item.schedule}
+                    badgeLabel={item.badgeLabel}
+                    badgeBg={item.badgeBg}
+                    badgeColor={item.badgeColor}
+                  />
+                ))}
+              </SectionCard>
+
+              <SectionCard icon="message-square" title="Mensagens recentes" actionLabel="Ver tudo">
+                {mensagens.map((item) => (
+                  <MensagemItem
+                    key={item.key}
+                    initials={item.initials}
+                    avatarColor={item.avatarColor}
+                    name={item.name}
+                    message={item.message}
+                    time={item.time}
+                    unread={item.unread}
+                  />
+                ))}
+              </SectionCard>
+            </View>
+
+            <View style={styles.parte2}>
+                <SectionCard icon="check-circle" title="Tarefas pendentes" actionLabel="Ver tudo">
+                {tarefas.map((item) => (
+                  <TarefaItem
+                    key={item.key}
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    badgeLabel={item.badgeLabel}
+                    badgeBg={item.badgeBg}
+                    badgeColor={item.badgeColor}
+                    done={taskDone[item.key]}
+                    onToggle={() =>
+                      setTaskDone((prev) => ({ ...prev, [item.key]: !prev[item.key] }))
+                    }
+                  />
+                ))}
+
+                <View style={styles.addTaskRow}>
+                  <Feather name="plus-circle" size={14} color={colors.primaryText} />
+                  <Text style={styles.addTaskText}>Nova tarefa</Text>
+                </View>
+              </SectionCard>
+
+              <SectionCard icon="volume-2" title="Avisos" actionLabel="Ver todos">
+                <AvisoItem
+                  title="Reunião de monitores"
+                  description="Sexta-feira, 24/05 às 16:00 no canal #geral"
                 />
-              ))}
-            </SectionCard>
-
-            <SectionCard icon="message-square" title="Mensagens recentes" actionLabel="Ver tudo">
-              {mensagens.map((item) => (
-                <MensagemItem
-                  key={item.key}
-                  initials={item.initials}
-                  avatarColor={item.avatarColor}
-                  name={item.name}
-                  message={item.message}
-                  time={item.time}
-                  unread={item.unread}
-                />
-              ))}
-            </SectionCard>
-
-            <SectionCard icon="check-circle" title="Tarefas pendentes" actionLabel="Ver tudo">
-              {tarefas.map((item) => (
-                <TarefaItem
-                  key={item.key}
-                  title={item.title}
-                  subtitle={item.subtitle}
-                  badgeLabel={item.badgeLabel}
-                  badgeBg={item.badgeBg}
-                  badgeColor={item.badgeColor}
-                  done={taskDone[item.key]}
-                  onToggle={() =>
-                    setTaskDone((prev) => ({ ...prev, [item.key]: !prev[item.key] }))
-                  }
-                />
-              ))}
-
-              <View style={styles.addTaskRow}>
-                <Feather name="plus-circle" size={14} color={colors.primaryText} />
-                <Text style={styles.addTaskText}>Nova tarefa</Text>
-              </View>
-            </SectionCard>
-
-            <SectionCard icon="volume-2" title="Avisos" actionLabel="Ver todos">
-              <AvisoItem
-                title="Reunião de monitores"
-                description="Sexta-feira, 24/05 às 16:00 no canal #geral"
-              />
-            </SectionCard>
+              </SectionCard>
+            </View>
           </View>
         </ScrollView>
       </View>
     </View>
+    
   )
 }
