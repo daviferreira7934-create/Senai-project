@@ -296,11 +296,12 @@ export const styles = StyleSheet.create({
   grid: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "center",
+    justifyContent:"flex-start",
     alignContent: "flex-start",
     gap: "10%",
     height: "80%",
-    padding: "2%"
+    padding: "2%",
+    width: "110%",
   },
 
   sectionCard: {
@@ -310,10 +311,12 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: colors.border,
     padding: "5%",
+    width: "100%",
   },
 parte1:{
   width:"40%",
   gap: "3%",
+  height: "100%",
 },
 
 parte2:{
