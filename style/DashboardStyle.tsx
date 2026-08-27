@@ -214,8 +214,8 @@ export const styles = StyleSheet.create({
   },
 
   iconButton: {
-    width: 38,
-    height: 38,
+    width:  "1%",
+    height: "2%",
     borderRadius: 19,
     backgroundColor: colors.card,
     borderWidth: 1,
@@ -248,24 +248,24 @@ export const styles = StyleSheet.create({
 
   statCard: {
     flexGrow: 1,
-    flexBasis: 220,
+    flexBasis: "1%",
     backgroundColor: colors.card,
     borderRadius: 12,
     borderWidth: 1,
     borderColor: colors.border,
-    padding: 16,
+    padding: "2%",
   },
 
   statTopRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 12,
+    gap: "3%",
   },
 
   statIconBox: {
-    width: 40,
-    height: 40,
-    borderRadius: 10,
+    width: "4%",
+    height: "4%",
+    borderRadius: "10%",
     backgroundColor: colors.iconBg,
     alignItems: "center",
     justifyContent: "center",
@@ -296,24 +296,39 @@ export const styles = StyleSheet.create({
   grid: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 16,
+    justifyContent:"flex-start",
+    alignContent: "flex-start",
+    gap: "10%",
+    height: "80%",
+    padding: "2%",
+    width: "110%",
   },
 
   sectionCard: {
-    flexGrow: 1,
-    flexBasis: 380,
+    flexGrow: 1,  
     backgroundColor: colors.card,
     borderRadius: 12,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.border,
-    padding: 20,
+    padding: "5%",
+    width: "100%",
   },
+parte1:{
+  width:"40%",
+  gap: "3%",
+  height: "100%",
+},
 
+parte2:{
+  width:"40%",
+    gap: "3%",
+    height: "100%", 
+},
   sectionHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 16,
+    marginBottom: "5%",
   },
 
   sectionHeaderLeft: {
