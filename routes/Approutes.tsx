@@ -7,6 +7,7 @@ import DashboardScreen from '../screen/DashboardScreen'
 import LoginScreen from "../screen/LoginScreen"
 import React from 'react'
 import ChatScreen from '../screen/ChatScreen';
+import AgendaScreen from '../screen/AgendaScreen'
 
 
 
@@ -34,6 +35,11 @@ export default function Approutes() {
       <Stack.Screen
         name="DashboardScreen"
         component={DashboardScreen}
+      />   
+     
+     <Stack.Screen
+        name="AgendaScreen"
+        component={AgendaScreen}
       />
       </Stack.Navigator>
     </NavigationContainer>
